@@ -1,8 +1,8 @@
-# SQL-50-Interesting-Problems
+# SQL 50 Interesting Problems
 
-## 1. Rising temperature day
+## 1. Rising temperature day 🥵
    
-Table: Weather
+Table: Weather ⛈️
 
 | Column Name   | Type    |
 |---------------|---------|
@@ -19,7 +19,7 @@ Return the result table in any order.
 
 The query result format is in the following example.
 
-## Solution
+## Solution ⛅
 
 - Intuition
 
@@ -56,9 +56,9 @@ Output:
 | 4  |
 
 
-## 2. Average Time of Process per Machine
+## 2. Average Time of Process per Machine 💻
 
-Table: Activity
+Table: Activity 🖱️
 
 | Column Name    | Type    |
 |----------------|---------|
@@ -84,7 +84,7 @@ The resulting table should have the machine_id along with the average time as pr
 
 Return the result table in any order.
 
-## Solution 
+## Solution 🤖
 
 - Intuition
 
@@ -132,9 +132,9 @@ Output:
 | 2          | 1.456           |
 
 
-## 3. Students and Exams
+## 3. Students and Exams 📜
 
-Table: Students
+Table: Students 👨‍🎓
 
 | Column Name   | Type    |
 |---------------|---------|
@@ -144,7 +144,7 @@ Table: Students
 student_id is the primary key for this table.
 Each row of this table contains the ID and the name of one student in the school.
  
-Table: Subjects
+Table: Subjects 📂
 
 | Column Name  | Type    |
 |--------------|---------|
@@ -153,7 +153,7 @@ Table: Subjects
 subject_name is the primary key for this table.
 Each row of this table contains the name of one subject in the school.
  
-Table: Examinations
+Table: Examinations 📖
 
 | Column Name  | Type    |
 |--------------|---------|
@@ -168,7 +168,7 @@ Find the number of times each student attended each exam.
 
 Return the result table ordered by student_id and subject_name.
 
-## Solution:
+## Solution: 📑
 
 - Intuition:
   
