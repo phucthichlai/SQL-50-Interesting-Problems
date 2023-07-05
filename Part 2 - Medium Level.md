@@ -199,7 +199,7 @@ Output:
 |----------------------|
 | 50.00                |
 
-## 3. Game play analysis 🎮
+## 4. Game play analysis 🎮
   ### Level: Medium 🟡
 
 Table: Activity
