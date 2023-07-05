@@ -6,14 +6,14 @@
   
 Table: Employee
 
-+-------------+---------+
+
 | Column Name | Type    |
-+-------------+---------+
+|-------------|---------|
 | id          | int     |
 | name        | varchar |
 | department  | varchar |
 | managerId   | int     |
-+-------------+---------+
+
 id is the primary key column for this table.
 Each row of this table indicates the name of an employee, their department, and the id of their manager.
 If managerId is null, then the employee does not have a manager.
@@ -63,25 +63,25 @@ Output:
 
 Table: Signups
 
-+----------------+----------+
+
 | Column Name    | Type     |
-+----------------+----------+
+|----------------|----------|
 | user_id        | int      |
 | time_stamp     | datetime |
-+----------------+----------+
+
 user_id is the primary key for this table.
 Each row contains information about the signup time for the user with ID user_id.
  
 
 Table: Confirmations
 
-+----------------+----------+
+
 | Column Name    | Type     |
-+----------------+----------+
+|----------------|----------|
 | user_id        | int      |
 | time_stamp     | datetime |
 | action         | ENUM     |
-+----------------+----------+
+
 (user_id, time_stamp) is the primary key for this table.
 user_id is a foreign key with a reference to the Signups table.
 action is an ENUM of the type ('confirmed', 'timeout')
@@ -144,14 +144,14 @@ Output:
 
 Table: Delivery
 
-+-----------------------------+---------+
+
 | Column Name                 | Type    |
-+-----------------------------+---------+
+|-----------------------------|---------|
 | delivery_id                 | int     |
 | customer_id                 | int     |
 | order_date                  | date    |
 | customer_pref_delivery_date | date    |
-+-----------------------------+---------+
+
 delivery_id is the primary key of this table.
 The table holds information about food delivery to customers that make orders at some date and specify a preferred delivery date (on the same order date or after it).
  
@@ -204,14 +204,14 @@ Output:
 
 Table: Activity
 
-+--------------+---------+
+
 | Column Name  | Type    |
-+--------------+---------+
+|--------------|---------|
 | player_id    | int     |
 | device_id    | int     |
 | event_date   | date    |
 | games_played | int     |
-+--------------+---------+
+
 (player_id, event_date) is the primary key of this table.
 This table shows the activity of players of some games.
 Each row is a record of a player who logged in and played a number of games (possibly 0) before logging out on someday using some device.
