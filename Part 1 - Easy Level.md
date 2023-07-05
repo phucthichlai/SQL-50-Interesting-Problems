@@ -1,4 +1,4 @@
-# SQL 50 Interesting Problems
+# SQL 50 Interesting Problems (part 1)
 
 ## 1. Rising temperature day 🥵
    ### Level: Easy 🟢
