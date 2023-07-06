@@ -1,4 +1,4 @@
-# SQL 40 Interesting Problems (part 2)
+# SQL 50 Interesting Problems (part 2)
 
 ## 1. Managers with at least 5 reports
 
@@ -260,3 +260,70 @@ Output:
 |-----------|
 | 0.33      |
 
+## 5. Customers who bought all products 🛍️
+  ### Level: Medium 🟡
+
+Table: Customer
+
+
+| Column Name | Type    |
+|-------------|---------|
+| customer_id | int     |
+| product_key | int     |
+
+There is no primary key for this table. It may contain duplicates. customer_id is not NULL.
+product_key is a foreign key to Product table.
+ 
+Table: Product
+
+| Column Name | Type    |
+|-------------|---------|
+| product_key | int     |
+
+product_key is the primary key column for this table.
+
+Write an SQL query to report the customer ids from the Customer table that bought all the products in the Product table.
+
+Return the result table in any order.
+
+## Solution: 🛒
+
+- Intuition:
+
++ The key is find customer that COUNT PRODUCT of that customer = COUNT (*) in product table.
++ We output only the customer_id, so I used HAVING
++ A small trick is there is duplicated values in the customer table, so if customer A bought all products but he bought some items more than once, the COUNT PRODUCT will be > COUNT (*) FROM PRODUCT table. Therefore, we have to used COUNT(DISTINCT) to get the right answer.
+  
+- Code:
+
+```
+select customer_id
+from customer
+group by customer_id
+having count(distinct(product_key)) = (select count(*) from product)
+```
+
+Input: 
+Customer table:
+
+| customer_id | product_key |
+|-------------|-------------|
+| 1           | 5           |
+| 2           | 6           |
+| 3           | 5           |
+| 3           | 6           |
+| 1           | 6           |
+
+Product table:
+
+| product_key |
+|-------------|
+| 5           |
+| 6           |
+
+Output: 
+
+| customer_id |
+|-------------|
+| 1           |
+| 3           |
